@@ -12,10 +12,19 @@
     </style>
 
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
+    <script src="jquery.js"></script>
     <script type="text/javascript" src="map.js"></script>
   </head>
   <body>
     <div id="map"></div>
+    <div id="input" style="display: none;">
+      <form action="demo_form.asp">
+        Pickup Latitude: <input type="text" name="picklat"><br>
+        Pickup Longitude: <input type="text" name="picklon"><br>
+        Dropoff Latitude: <input type="text" name="droplat"><br>
+        Dropoff Longitude: <input type="text" name="droplon"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </body>
 </html>
