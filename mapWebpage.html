@@ -3,26 +3,24 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>PEV Team</title>
-
-    <style type="text/css">
-      #map {
-        width: 500px;
-        height: 500px;
-      }
-    </style>
-
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="jquery.js"></script>
-    <script type="text/javascript" src="map.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/map.css"></link>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLnF0RwcwqWQtnZwyjwe0V0qJjmJmnH1c"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery.csv-0.71.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </head>
   <body>
-    <div id="map"></div>
-    <div id="input" style="display: none;">
-      <form action="demo_form.asp">
-        Pickup Latitude: <input type="text" name="picklat"><br>
-        Pickup Longitude: <input type="text" name="picklon"><br>
-        Dropoff Latitude: <input type="text" name="droplat"><br>
-        Dropoff Longitude: <input type="text" name="droplon"><br>
+    <div id="map-canvas"></div>
+    <div id="input">
+      <form id="taxi-data">
+        <div>
+          <label for="pickup-csv-file">Pickup file</label>
+          <input type="file" id="pickup-csv-file" name="pickup-file" />
+        </div>
+        <div>
+          <label for="dropoff-csv-file">Dropoff file</label>
+          <input type="file" id="dropoff-csv-file" name="dropoff-file" />
+        </div>
         <input type="submit" value="Submit">
       </form>
     </div>
