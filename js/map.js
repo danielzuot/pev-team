@@ -29,13 +29,11 @@ $(document).ready(function() {
 
   $( '#taxi-data' ).submit(function(event) {
       event.preventDefault();
-      var dataPaths = {};
-      var inputs = $(this).serializeArray();
-      alert(inputs);
-      $.each(inputs, function (i, input) {
-          alert(input.name);
-          dataPaths[input.name] = input.value;
-      });
+      var pickupFile = $('#pickup-csv-file').val();
+      var dropoffFile = $('#dropoff-csv-file').val();
       
+      console.log(pickupFile);
+      console.log(dropoffFile);
+
   });
 });
